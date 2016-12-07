@@ -11,15 +11,9 @@ import Photos
 
 public class PNTMPhotosManager {
 
-    let collectionQueue = DispatchQueue.init(label: "CollectionQueue")
-    var album: PHFetchResult<PHAssetCollection> = PHFetchResult()
-
-    init() {
-    }
+    var album: PHFetchResult<PHAssetCollection>
     
-    convenience init(ForAlbum album: String) {
-        self.init()
-        
+    public init(withAlbum album: String) {
         self.album = PHAssetCollection.fetchAssetCollections(withLocalIdentifiers: [ album ], options: nil)
     }
     
