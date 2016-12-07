@@ -6,6 +6,7 @@
 //  Copyright © 2016 Pintumo. All rights reserved.
 //
 
+import RxSwift
 import UIKit
 
 @UIApplicationMain
@@ -18,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let photos = PNTMPhotos(withAlbum: "Berlin Photobox")
         _ = photos.all()
-        _ = photos.select(index: 1, width: 200)
+        _ = photos.select(index: 1, width: 200).subscribe(onNext: { image in
+            print(image)
+        })
         
         return true
     }

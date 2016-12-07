@@ -21,7 +21,10 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/Pintumo/PNTMPhotos.git", :tag => "#{s.version}" }
 
-  s.source_files  = "PNTMPhotos", "PNTMPhotos/**/*.{h,swift}"
-  s.exclude_files = "Classes/Exclude"
+  s.dependency 'RxSwift'
 
+  s.source_files  = "PNTMPhotos", "PNTMPhotos/*.{swift}"
+
+
+	
 end

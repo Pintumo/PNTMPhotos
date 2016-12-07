@@ -8,6 +8,7 @@
 
 import Foundation
 import Photos
+import RxSwift
 
 public class PNTMPhotos {
     
@@ -45,33 +46,51 @@ public class PNTMPhotos {
         return PHAsset.fetchAssets(in: collection, options: nil)
     }
     
-    public func save(image: UIImage) {
-        PHPhotoLibrary.shared().performChanges({
-            let createAssetRequest = PHAssetChangeRequest.creationRequestForAsset(from: image)
-            guard let albumChangeRequest = PHAssetCollectionChangeRequest(for: self.collection) else {
-                assert(false, "Album change request failed")
-                return
-            }
-
-            guard let photoPlaceholder = createAssetRequest.placeholderForCreatedAsset else {
-                assert(false, "Placeholder is nil")
-                return
-            }
-            self.placeholder = photoPlaceholder
-            albumChangeRequest.addAssets([ self.placeholder ]  as NSArray)
-        }, completionHandler: { success, error in
+    public func save(image: UIImage) -> Observable<Bool> {
+        return Observable.create() { observer in
+            PHPhotoLibrary.shared().performChanges({
+                let createAssetRequest = PHAssetChangeRequest.creationRequestForAsset(from: image)
+                
+                guard let albumChangeRequest = PHAssetCollectionChangeRequest(for: self.collection) else {
+                    assert(false, "Album change request failed")
+                    return
+                }
+                
+                guard let photoPlaceholder = createAssetRequest.placeholderForCreatedAsset else {
+                    assert(false, "Placeholder is nil")
+                    return
+                }
+                self.placeholder = photoPlaceholder
+                
+                albumChangeRequest.addAssets([ self.placeholder ]  as NSArray)
+            
+            }, completionHandler: { success, error in
+                
+                if (error != nil) {
+                    observer.on(.next(true))
+                    observer.on(.completed)
+                } else {
+                    observer.on(.error(error!))
+                }
+                
         })
+            return Disposables.create()
+        }
     }
     
-    public func select(index: NSInteger, width: CGFloat) -> UIImage {
-        var image : UIImage!
-        PHImageManager.default().requestImage(for: self.all()[index],
-                                              targetSize: CGSize(width: width, height: 0.75 * width),
-                                              contentMode: .aspectFill,
-                                              options: nil) { (result, info) in
-                                                image = result!
+    
+    
+    public func select(index: NSInteger, size: CGSize, contentMode: PHImageContentMode) -> Observable<UIImage> {
+        return Observable.create() { observer in
+            PHImageManager.default().requestImage(for: self.all()[index], targetSize: size, contentMode: contentMode, options: nil) { (result, info) in
+                if let image = result {
+                    observer.on(.next(image as UIImage))
+                    observer.on(.completed)
+                } else {
+                    observer.on(.error(RxError.unknown))
+                }
+            }
+            return Disposables.create()
         }
-        
-        return image
     }
 }
