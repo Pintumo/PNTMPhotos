@@ -2,13 +2,15 @@ Pod::Spec.new do |s|
 
 
   s.name         = "PNTMPhotos"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "PNTMPhotos is a light weight interface to PHPhotoLibrary."
 
   s.description  = <<-DESC
 
   PNTMPhotos is a wrapper around the PHPhotoLibrary and will contain only
-  a little amaount of features.
+  a little amaount of featuresi.
+
+  it is build on top of RxSwift
 
                    DESC
 
@@ -21,7 +23,10 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/Pintumo/PNTMPhotos.git", :tag => "#{s.version}" }
 
-  s.source_files  = "PNTMPhotos", "PNTMPhotos/**/*.{h,swift}"
-  s.exclude_files = "Classes/Exclude"
+  s.dependency 'RxSwift'
 
+  s.source_files  = "PNTMPhotos", "PNTMPhotos/*.{swift}"
+
+
+	
 end

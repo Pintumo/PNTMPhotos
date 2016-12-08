@@ -7,111 +7,152 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17A14A801DF766880069FFA5 /* PNTMPhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A14A761DF766880069FFA5 /* PNTMPhotos.framework */; };
-		17A14A851DF766880069FFA5 /* PNTMPhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A14A841DF766880069FFA5 /* PNTMPhotosTests.swift */; };
-		17A14A871DF766880069FFA5 /* PNTMPhotos.h in Headers */ = {isa = PBXBuildFile; fileRef = 17A14A791DF766880069FFA5 /* PNTMPhotos.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		17A14A911DF773380069FFA5 /* PNTMPhotosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A14A901DF773380069FFA5 /* PNTMPhotosManager.swift */; };
-		17A14A921DF780470069FFA5 /* PNTMPhotosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A14A901DF773380069FFA5 /* PNTMPhotosManager.swift */; };
+		17A14AF01DF813360069FFA5 /* PNTMPhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A14AEF1DF813360069FFA5 /* PNTMPhotosTests.swift */; };
+		17A14AFC1DF814240069FFA5 /* PNTMPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A14AFB1DF814240069FFA5 /* PNTMPhotos.swift */; };
+		17A14AFE1DF814630069FFA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A14AFD1DF814630069FFA5 /* Assets.xcassets */; };
+		17A14B031DF814A20069FFA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A14B011DF814A20069FFA5 /* AppDelegate.swift */; };
+		17A14B041DF814A20069FFA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A14B021DF814A20069FFA5 /* ViewController.swift */; };
+		17A14B071DF814B00069FFA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A14B051DF814B00069FFA5 /* LaunchScreen.storyboard */; };
+		17A14B081DF814B00069FFA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A14B061DF814B00069FFA5 /* Main.storyboard */; };
+		994B6BE4E941AF8D79CE2605 /* Pods_PNTMPhotosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39ECFFC1E730501154964C7F /* Pods_PNTMPhotosTests.framework */; };
+		B2E4A9468DB4C34C462379BD /* Pods_PNTMPhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68E9B077DF0F83325722C9A0 /* Pods_PNTMPhotos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		17A14A811DF766880069FFA5 /* PBXContainerItemProxy */ = {
+		17A14AEC1DF813360069FFA5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 17A14A6D1DF766880069FFA5 /* Project object */;
+			containerPortal = 17A14ACF1DF813350069FFA5 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 17A14A751DF766880069FFA5;
+			remoteGlobalIDString = 17A14AD61DF813350069FFA5;
 			remoteInfo = PNTMPhotos;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17A14A761DF766880069FFA5 /* PNTMPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PNTMPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		17A14A791DF766880069FFA5 /* PNTMPhotos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNTMPhotos.h; sourceTree = "<group>"; };
-		17A14A7A1DF766880069FFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17A14A7F1DF766880069FFA5 /* PNTMPhotosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PNTMPhotosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		17A14A841DF766880069FFA5 /* PNTMPhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNTMPhotosTests.swift; sourceTree = "<group>"; };
-		17A14A861DF766880069FFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17A14A901DF773380069FFA5 /* PNTMPhotosManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNTMPhotosManager.swift; sourceTree = "<group>"; };
+		17A14AD71DF813350069FFA5 /* PNTMPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PNTMPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A14AEB1DF813360069FFA5 /* PNTMPhotosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PNTMPhotosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A14AEF1DF813360069FFA5 /* PNTMPhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNTMPhotosTests.swift; sourceTree = "<group>"; };
+		17A14AF11DF813360069FFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17A14AFB1DF814240069FFA5 /* PNTMPhotos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PNTMPhotos.swift; path = PNTMPhotos/PNTMPhotos.swift; sourceTree = "<group>"; };
+		17A14AFD1DF814630069FFA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17A14AFF1DF814970069FFA5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17A14B011DF814A20069FFA5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17A14B021DF814A20069FFA5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17A14B051DF814B00069FFA5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17A14B061DF814B00069FFA5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		39ECFFC1E730501154964C7F /* Pods_PNTMPhotosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PNTMPhotosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EF29C12C44C7BB16D0A6D2E /* Pods-PNTMPhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNTMPhotos.release.xcconfig"; path = "Pods/Target Support Files/Pods-PNTMPhotos/Pods-PNTMPhotos.release.xcconfig"; sourceTree = "<group>"; };
+		63C4A2FEAD7C3305CEDE8A54 /* Pods-PNTMPhotosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNTMPhotosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PNTMPhotosTests/Pods-PNTMPhotosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		65F9D617F5773F6EBE2464AE /* Pods-PNTMPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNTMPhotos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PNTMPhotos/Pods-PNTMPhotos.debug.xcconfig"; sourceTree = "<group>"; };
+		68E9B077DF0F83325722C9A0 /* Pods_PNTMPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PNTMPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74931807BC5F3AADF89A55C6 /* Pods-PNTMPhotosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNTMPhotosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PNTMPhotosTests/Pods-PNTMPhotosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		17A14A721DF766880069FFA5 /* Frameworks */ = {
+		17A14AD41DF813350069FFA5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2E4A9468DB4C34C462379BD /* Pods_PNTMPhotos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		17A14A7C1DF766880069FFA5 /* Frameworks */ = {
+		17A14AE81DF813360069FFA5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17A14A801DF766880069FFA5 /* PNTMPhotos.framework in Frameworks */,
+				994B6BE4E941AF8D79CE2605 /* Pods_PNTMPhotosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17A14A6C1DF766880069FFA5 = {
+		17A14ACE1DF813350069FFA5 = {
 			isa = PBXGroup;
 			children = (
-				17A14A781DF766880069FFA5 /* PNTMPhotos */,
-				17A14A831DF766880069FFA5 /* PNTMPhotosTests */,
-				17A14A771DF766880069FFA5 /* Products */,
+				17A14AFA1DF814090069FFA5 /* PNTMPhotos */,
+				17A14AD91DF813350069FFA5 /* Example */,
+				17A14AEE1DF813360069FFA5 /* PNTMPhotosTests */,
+				17A14AD81DF813350069FFA5 /* Products */,
+				67EEDD0D498AE642550748F0 /* Pods */,
+				266698577F6D8EA6C3CAFC1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		17A14A771DF766880069FFA5 /* Products */ = {
+		17A14AD81DF813350069FFA5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				17A14A761DF766880069FFA5 /* PNTMPhotos.framework */,
-				17A14A7F1DF766880069FFA5 /* PNTMPhotosTests.xctest */,
+				17A14AD71DF813350069FFA5 /* PNTMPhotos.app */,
+				17A14AEB1DF813360069FFA5 /* PNTMPhotosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		17A14A781DF766880069FFA5 /* PNTMPhotos */ = {
+		17A14AD91DF813350069FFA5 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				17A14A791DF766880069FFA5 /* PNTMPhotos.h */,
-				17A14A7A1DF766880069FFA5 /* Info.plist */,
-				17A14A901DF773380069FFA5 /* PNTMPhotosManager.swift */,
+				17A14B011DF814A20069FFA5 /* AppDelegate.swift */,
+				17A14AFD1DF814630069FFA5 /* Assets.xcassets */,
+				17A14AFF1DF814970069FFA5 /* Info.plist */,
+				17A14B051DF814B00069FFA5 /* LaunchScreen.storyboard */,
+				17A14B061DF814B00069FFA5 /* Main.storyboard */,
+				17A14B021DF814A20069FFA5 /* ViewController.swift */,
 			);
+			name = Example;
 			path = PNTMPhotos;
 			sourceTree = "<group>";
 		};
-		17A14A831DF766880069FFA5 /* PNTMPhotosTests */ = {
+		17A14AEE1DF813360069FFA5 /* PNTMPhotosTests */ = {
 			isa = PBXGroup;
 			children = (
-				17A14A841DF766880069FFA5 /* PNTMPhotosTests.swift */,
-				17A14A861DF766880069FFA5 /* Info.plist */,
+				17A14AEF1DF813360069FFA5 /* PNTMPhotosTests.swift */,
+				17A14AF11DF813360069FFA5 /* Info.plist */,
 			);
 			path = PNTMPhotosTests;
 			sourceTree = "<group>";
 		};
+		17A14AFA1DF814090069FFA5 /* PNTMPhotos */ = {
+			isa = PBXGroup;
+			children = (
+				17A14AFB1DF814240069FFA5 /* PNTMPhotos.swift */,
+			);
+			name = PNTMPhotos;
+			sourceTree = "<group>";
+		};
+		266698577F6D8EA6C3CAFC1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68E9B077DF0F83325722C9A0 /* Pods_PNTMPhotos.framework */,
+				39ECFFC1E730501154964C7F /* Pods_PNTMPhotosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67EEDD0D498AE642550748F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65F9D617F5773F6EBE2464AE /* Pods-PNTMPhotos.debug.xcconfig */,
+				5EF29C12C44C7BB16D0A6D2E /* Pods-PNTMPhotos.release.xcconfig */,
+				63C4A2FEAD7C3305CEDE8A54 /* Pods-PNTMPhotosTests.debug.xcconfig */,
+				74931807BC5F3AADF89A55C6 /* Pods-PNTMPhotosTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		17A14A731DF766880069FFA5 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				17A14A871DF766880069FFA5 /* PNTMPhotos.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		17A14A751DF766880069FFA5 /* PNTMPhotos */ = {
+		17A14AD61DF813350069FFA5 /* PNTMPhotos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 17A14A8A1DF766880069FFA5 /* Build configuration list for PBXNativeTarget "PNTMPhotos" */;
+			buildConfigurationList = 17A14AF41DF813360069FFA5 /* Build configuration list for PBXNativeTarget "PNTMPhotos" */;
 			buildPhases = (
-				17A14A711DF766880069FFA5 /* Sources */,
-				17A14A721DF766880069FFA5 /* Frameworks */,
-				17A14A731DF766880069FFA5 /* Headers */,
-				17A14A741DF766880069FFA5 /* Resources */,
+				D92A0EF492D38C8834E8C0F2 /* [CP] Check Pods Manifest.lock */,
+				17A14AD31DF813350069FFA5 /* Sources */,
+				17A14AD41DF813350069FFA5 /* Frameworks */,
+				17A14AD51DF813350069FFA5 /* Resources */,
+				1DD2FA5C882B32328D569AF3 /* [CP] Embed Pods Frameworks */,
+				7A3F3A84A636152CC95852C4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -119,77 +160,84 @@
 			);
 			name = PNTMPhotos;
 			productName = PNTMPhotos;
-			productReference = 17A14A761DF766880069FFA5 /* PNTMPhotos.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 17A14AD71DF813350069FFA5 /* PNTMPhotos.app */;
+			productType = "com.apple.product-type.application";
 		};
-		17A14A7E1DF766880069FFA5 /* PNTMPhotosTests */ = {
+		17A14AEA1DF813360069FFA5 /* PNTMPhotosTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 17A14A8D1DF766880069FFA5 /* Build configuration list for PBXNativeTarget "PNTMPhotosTests" */;
+			buildConfigurationList = 17A14AF71DF813360069FFA5 /* Build configuration list for PBXNativeTarget "PNTMPhotosTests" */;
 			buildPhases = (
-				17A14A7B1DF766880069FFA5 /* Sources */,
-				17A14A7C1DF766880069FFA5 /* Frameworks */,
-				17A14A7D1DF766880069FFA5 /* Resources */,
+				C0DD66999C3AFB16D2303C7B /* [CP] Check Pods Manifest.lock */,
+				17A14AE71DF813360069FFA5 /* Sources */,
+				17A14AE81DF813360069FFA5 /* Frameworks */,
+				17A14AE91DF813360069FFA5 /* Resources */,
+				3746C4A3C59742A392EB790F /* [CP] Embed Pods Frameworks */,
+				D576D1F02F39729DE83B05F4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				17A14A821DF766880069FFA5 /* PBXTargetDependency */,
+				17A14AED1DF813360069FFA5 /* PBXTargetDependency */,
 			);
 			name = PNTMPhotosTests;
 			productName = PNTMPhotosTests;
-			productReference = 17A14A7F1DF766880069FFA5 /* PNTMPhotosTests.xctest */;
+			productReference = 17A14AEB1DF813360069FFA5 /* PNTMPhotosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		17A14A6D1DF766880069FFA5 /* Project object */ = {
+		17A14ACF1DF813350069FFA5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Pintumo;
 				TargetAttributes = {
-					17A14A751DF766880069FFA5 = {
+					17A14AD61DF813350069FFA5 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 642J3P53HE;
-						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
-					17A14A7E1DF766880069FFA5 = {
+					17A14AEA1DF813360069FFA5 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 642J3P53HE;
 						ProvisioningStyle = Automatic;
+						TestTargetID = 17A14AD61DF813350069FFA5;
 					};
 				};
 			};
-			buildConfigurationList = 17A14A701DF766880069FFA5 /* Build configuration list for PBXProject "PNTMPhotos" */;
+			buildConfigurationList = 17A14AD21DF813350069FFA5 /* Build configuration list for PBXProject "PNTMPhotos" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 17A14A6C1DF766880069FFA5;
-			productRefGroup = 17A14A771DF766880069FFA5 /* Products */;
+			mainGroup = 17A14ACE1DF813350069FFA5;
+			productRefGroup = 17A14AD81DF813350069FFA5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				17A14A751DF766880069FFA5 /* PNTMPhotos */,
-				17A14A7E1DF766880069FFA5 /* PNTMPhotosTests */,
+				17A14AD61DF813350069FFA5 /* PNTMPhotos */,
+				17A14AEA1DF813360069FFA5 /* PNTMPhotosTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		17A14A741DF766880069FFA5 /* Resources */ = {
+		17A14AD51DF813350069FFA5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17A14B071DF814B00069FFA5 /* LaunchScreen.storyboard in Resources */,
+				17A14AFE1DF814630069FFA5 /* Assets.xcassets in Resources */,
+				17A14B081DF814B00069FFA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		17A14A7D1DF766880069FFA5 /* Resources */ = {
+		17A14AE91DF813360069FFA5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -198,36 +246,130 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1DD2FA5C882B32328D569AF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PNTMPhotos/Pods-PNTMPhotos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3746C4A3C59742A392EB790F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PNTMPhotosTests/Pods-PNTMPhotosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A3F3A84A636152CC95852C4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PNTMPhotos/Pods-PNTMPhotos-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0DD66999C3AFB16D2303C7B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D576D1F02F39729DE83B05F4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PNTMPhotosTests/Pods-PNTMPhotosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D92A0EF492D38C8834E8C0F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		17A14A711DF766880069FFA5 /* Sources */ = {
+		17A14AD31DF813350069FFA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17A14A911DF773380069FFA5 /* PNTMPhotosManager.swift in Sources */,
+				17A14B041DF814A20069FFA5 /* ViewController.swift in Sources */,
+				17A14B031DF814A20069FFA5 /* AppDelegate.swift in Sources */,
+				17A14AFC1DF814240069FFA5 /* PNTMPhotos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		17A14A7B1DF766880069FFA5 /* Sources */ = {
+		17A14AE71DF813360069FFA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17A14A921DF780470069FFA5 /* PNTMPhotosManager.swift in Sources */,
-				17A14A851DF766880069FFA5 /* PNTMPhotosTests.swift in Sources */,
+				17A14AF01DF813360069FFA5 /* PNTMPhotosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		17A14A821DF766880069FFA5 /* PBXTargetDependency */ = {
+		17A14AED1DF813360069FFA5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 17A14A751DF766880069FFA5 /* PNTMPhotos */;
-			targetProxy = 17A14A811DF766880069FFA5 /* PBXContainerItemProxy */;
+			target = 17A14AD61DF813350069FFA5 /* PNTMPhotos */;
+			targetProxy = 17A14AEC1DF813360069FFA5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		17A14A881DF766880069FFA5 /* Debug */ = {
+		17A14AF21DF813360069FFA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -245,12 +387,12 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -274,13 +416,10 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		17A14A891DF766880069FFA5 /* Release */ = {
+		17A14AF31DF813360069FFA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -298,12 +437,12 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -319,109 +458,103 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		17A14A8B1DF766880069FFA5 /* Debug */ = {
+		17A14AF51DF813360069FFA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65F9D617F5773F6EBE2464AE /* Pods-PNTMPhotos.debug.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 642J3P53HE;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PNTMPhotos/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pintumo.PNTMPhotos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		17A14A8C1DF766880069FFA5 /* Release */ = {
+		17A14AF61DF813360069FFA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EF29C12C44C7BB16D0A6D2E /* Pods-PNTMPhotos.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 642J3P53HE;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PNTMPhotos/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pintumo.PNTMPhotos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
-		17A14A8E1DF766880069FFA5 /* Debug */ = {
+		17A14AF81DF813360069FFA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63C4A2FEAD7C3305CEDE8A54 /* Pods-PNTMPhotosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 642J3P53HE;
 				INFOPLIST_FILE = PNTMPhotosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pintumo.PNTMPhotosTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PNTMPhotos.app/PNTMPhotos";
 			};
 			name = Debug;
 		};
-		17A14A8F1DF766880069FFA5 /* Release */ = {
+		17A14AF91DF813360069FFA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74931807BC5F3AADF89A55C6 /* Pods-PNTMPhotosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 642J3P53HE;
 				INFOPLIST_FILE = PNTMPhotosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pintumo.PNTMPhotosTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PNTMPhotos.app/PNTMPhotos";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		17A14A701DF766880069FFA5 /* Build configuration list for PBXProject "PNTMPhotos" */ = {
+		17A14AD21DF813350069FFA5 /* Build configuration list for PBXProject "PNTMPhotos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				17A14A881DF766880069FFA5 /* Debug */,
-				17A14A891DF766880069FFA5 /* Release */,
+				17A14AF21DF813360069FFA5 /* Debug */,
+				17A14AF31DF813360069FFA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		17A14A8A1DF766880069FFA5 /* Build configuration list for PBXNativeTarget "PNTMPhotos" */ = {
+		17A14AF41DF813360069FFA5 /* Build configuration list for PBXNativeTarget "PNTMPhotos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				17A14A8B1DF766880069FFA5 /* Debug */,
-				17A14A8C1DF766880069FFA5 /* Release */,
+				17A14AF51DF813360069FFA5 /* Debug */,
+				17A14AF61DF813360069FFA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		17A14A8D1DF766880069FFA5 /* Build configuration list for PBXNativeTarget "PNTMPhotosTests" */ = {
+		17A14AF71DF813360069FFA5 /* Build configuration list for PBXNativeTarget "PNTMPhotosTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				17A14A8E1DF766880069FFA5 /* Debug */,
-				17A14A8F1DF766880069FFA5 /* Release */,
+				17A14AF81DF813360069FFA5 /* Debug */,
+				17A14AF91DF813360069FFA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 17A14A6D1DF766880069FFA5 /* Project object */;
+	rootObject = 17A14ACF1DF813350069FFA5 /* Project object */;
 }

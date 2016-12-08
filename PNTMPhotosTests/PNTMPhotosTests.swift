@@ -2,12 +2,11 @@
 //  PNTMPhotosTests.swift
 //  PNTMPhotosTests
 //
-//  Created by Evangelos Sismanidis on 06.12.16.
+//  Created by Evangelos Sismanidis on 07.12.16.
 //  Copyright © 2016 Pintumo. All rights reserved.
 //
 
 import XCTest
-import PNTMPhotos
 @testable import PNTMPhotos
 
 class PNTMPhotosTests: XCTestCase {
@@ -25,11 +24,6 @@ class PNTMPhotosTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-        let photoManager = PNTMPhotosManager.init(ForAlbum: "Test")
-        let fetchResult = photoManager.allPhotos()
-        XCTAssert(fetchResult.count == 0)
-        
     }
     
     func testPerformanceExample() {
