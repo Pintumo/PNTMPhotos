@@ -25,45 +25,46 @@ public class PNTMPhotos {
     }
     
     public func save(image: UIImage) -> Observable<Bool> {
-        return collection().flatMap { collection in
-            return Observable.create() { observer in
-                var placeholder: PHObjectPlaceholder!
-                PHPhotoLibrary.shared().performChanges({
-                    let createAssetRequest = PHAssetChangeRequest.creationRequestForAsset(from: image)
-                    
-                    guard let albumChangeRequest = PHAssetCollectionChangeRequest(for: collection) else {
-                        observer.on(.error(RxError.unknown))
-                        return;
-                    }
-                    
-                    guard let photoPlaceholder = createAssetRequest.placeholderForCreatedAsset else {
-                        observer.on(.error(RxError.unknown))
-                        return;
-                    }
-                    placeholder = photoPlaceholder
-                    
-                    albumChangeRequest.addAssets([ placeholder ]  as NSArray)
-                    
-                }, completionHandler: { success, error in
-                    
-                    if (error != nil) {
-                        observer.on(.next(true))
-                        observer.on(.completed)
-                    } else {
-                        observer.on(.error(error!))
-                    }
-                })
-                return Disposables.create()
-            }
+        return collection()
+            .flatMap { collection in
+                Observable.create() { observer in
+                    var placeholder: PHObjectPlaceholder!
+                    PHPhotoLibrary.shared().performChanges({
+                        let createAssetRequest = PHAssetChangeRequest.creationRequestForAsset(from: image)
+                        
+                        guard let albumChangeRequest = PHAssetCollectionChangeRequest(for: collection) else {
+                            observer.on(.error(RxError.unknown))
+                            return;
+                        }
+                        
+                        guard let photoPlaceholder = createAssetRequest.placeholderForCreatedAsset else {
+                            observer.on(.error(RxError.unknown))
+                            return;
+                        }
+                        placeholder = photoPlaceholder
+                        
+                        albumChangeRequest.addAssets([ placeholder ]  as NSArray)
+                        
+                    }, completionHandler: { success, error in
+                        
+                        if (error == nil) {
+                            observer.on(.next(true))
+                            observer.on(.completed)
+                        } else {
+                            observer.on(.error(error!))
+                        }
+                    })
+                    return Disposables.create()
+                }
         }
     }
     
-    public func select(index: NSInteger, size: CGSize, contentMode: PHImageContentMode) -> Observable<UIImage> {
+    public func select(index: uint, size: CGSize, contentMode: PHImageContentMode) -> Observable<UIImage> {
         return all()
             .filter({ $0.count > 0})
             .flatMap { assets in
                 Observable.create() { observer in
-                    PHImageManager.default().requestImage(for: assets[index], targetSize: size, contentMode: contentMode, options: nil) { (result, info) in
+                    PHImageManager.default().requestImage(for: assets[Int(index)], targetSize: size, contentMode: contentMode, options: nil) { (result, info) in
                         if let image = result {
                             observer.on(.next(image as UIImage))
                             observer.on(.completed)

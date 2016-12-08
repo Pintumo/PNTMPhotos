@@ -2,13 +2,15 @@ Pod::Spec.new do |s|
 
 
   s.name         = "PNTMPhotos"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "PNTMPhotos is a light weight interface to PHPhotoLibrary."
 
   s.description  = <<-DESC
 
   PNTMPhotos is a wrapper around the PHPhotoLibrary and will contain only
-  a little amaount of features.
+  a little amaount of featuresi.
+
+  it is build on top of RxSwift
 
                    DESC
 
