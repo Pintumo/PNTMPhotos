@@ -10,7 +10,6 @@
 		17A14AF01DF813360069FFA5 /* PNTMPhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A14AEF1DF813360069FFA5 /* PNTMPhotosTests.swift */; };
 		17A14AFC1DF814240069FFA5 /* PNTMPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A14AFB1DF814240069FFA5 /* PNTMPhotos.swift */; };
 		17A14AFE1DF814630069FFA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A14AFD1DF814630069FFA5 /* Assets.xcassets */; };
-		17A14B001DF814970069FFA5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17A14AFF1DF814970069FFA5 /* Info.plist */; };
 		17A14B031DF814A20069FFA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A14B011DF814A20069FFA5 /* AppDelegate.swift */; };
 		17A14B041DF814A20069FFA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A14B021DF814A20069FFA5 /* ViewController.swift */; };
 		17A14B071DF814B00069FFA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A14B051DF814B00069FFA5 /* LaunchScreen.storyboard */; };
@@ -234,7 +233,6 @@
 			files = (
 				17A14B071DF814B00069FFA5 /* LaunchScreen.storyboard in Resources */,
 				17A14AFE1DF814630069FFA5 /* Assets.xcassets in Resources */,
-				17A14B001DF814970069FFA5 /* Info.plist in Resources */,
 				17A14B081DF814B00069FFA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +387,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -438,6 +437,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -466,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65F9D617F5773F6EBE2464AE /* Pods-PNTMPhotos.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 642J3P53HE;
 				INFOPLIST_FILE = PNTMPhotos/Info.plist;
@@ -480,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5EF29C12C44C7BB16D0A6D2E /* Pods-PNTMPhotos.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 642J3P53HE;
 				INFOPLIST_FILE = PNTMPhotos/Info.plist;
@@ -541,6 +543,7 @@
 				17A14AF61DF813360069FFA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17A14AF71DF813360069FFA5 /* Build configuration list for PBXNativeTarget "PNTMPhotosTests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +552,7 @@
 				17A14AF91DF813360069FFA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

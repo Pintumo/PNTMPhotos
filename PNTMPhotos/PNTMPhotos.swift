@@ -12,83 +12,102 @@ import RxSwift
 
 public class PNTMPhotos {
     
-    var collection: PHAssetCollection!
-    var placeholder: PHObjectPlaceholder!
+    let collectionName : String
     
     public init(withAlbum album: String) {
-        let fetchOptions = PHFetchOptions()
-        fetchOptions.predicate = NSPredicate(format: "title = %@", album)
-        var collectionOptional = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: fetchOptions)
-        if let collection = collectionOptional.firstObject {
-            self.collection = collection
-        } else {
-            
-            PHPhotoLibrary.shared().performChanges({
-                let createCollectionRequest = PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: album)
-                self.placeholder = createCollectionRequest.placeholderForCreatedAssetCollection
-            }, completionHandler: { (success, error) in
-                if success {
-                    collectionOptional = PHAssetCollection.fetchAssetCollections(withLocalIdentifiers: [self.placeholder.localIdentifier], options: nil)
-                    if let collection = collectionOptional.firstObject {
-                        self.collection = collection
-                    } else {
-                        assert(false, "Album creation request failed")
-                    }
-                }
-                else {
-                    assert(false, "Album creation request failed")
-                }
-            })
-        }
+        collectionName = album
     }
     
-    public func all() -> PHFetchResult<PHAsset> {
-        return PHAsset.fetchAssets(in: collection, options: nil)
+    public func all() -> Observable<PHFetchResult<PHAsset>> {
+        return collection().map { collection in
+            PHAsset.fetchAssets(in: collection, options: nil)
+        }
     }
     
     public func save(image: UIImage) -> Observable<Bool> {
-        return Observable.create() { observer in
-            PHPhotoLibrary.shared().performChanges({
-                let createAssetRequest = PHAssetChangeRequest.creationRequestForAsset(from: image)
-                
-                guard let albumChangeRequest = PHAssetCollectionChangeRequest(for: self.collection) else {
-                    assert(false, "Album change request failed")
-                    return
-                }
-                
-                guard let photoPlaceholder = createAssetRequest.placeholderForCreatedAsset else {
-                    assert(false, "Placeholder is nil")
-                    return
-                }
-                self.placeholder = photoPlaceholder
-                
-                albumChangeRequest.addAssets([ self.placeholder ]  as NSArray)
-            
-            }, completionHandler: { success, error in
-                
-                if (error != nil) {
-                    observer.on(.next(true))
-                    observer.on(.completed)
-                } else {
-                    observer.on(.error(error!))
-                }
-                
-        })
-            return Disposables.create()
+        return collection().flatMap { collection in
+            return Observable.create() { observer in
+                var placeholder: PHObjectPlaceholder!
+                PHPhotoLibrary.shared().performChanges({
+                    let createAssetRequest = PHAssetChangeRequest.creationRequestForAsset(from: image)
+                    
+                    guard let albumChangeRequest = PHAssetCollectionChangeRequest(for: collection) else {
+                        observer.on(.error(RxError.unknown))
+                        return;
+                    }
+                    
+                    guard let photoPlaceholder = createAssetRequest.placeholderForCreatedAsset else {
+                        observer.on(.error(RxError.unknown))
+                        return;
+                    }
+                    placeholder = photoPlaceholder
+                    
+                    albumChangeRequest.addAssets([ placeholder ]  as NSArray)
+                    
+                }, completionHandler: { success, error in
+                    
+                    if (error != nil) {
+                        observer.on(.next(true))
+                        observer.on(.completed)
+                    } else {
+                        observer.on(.error(error!))
+                    }
+                })
+                return Disposables.create()
+            }
         }
     }
     
-    
-    
     public func select(index: NSInteger, size: CGSize, contentMode: PHImageContentMode) -> Observable<UIImage> {
-        return Observable.create() { observer in
-            PHImageManager.default().requestImage(for: self.all()[index], targetSize: size, contentMode: contentMode, options: nil) { (result, info) in
-                if let image = result {
-                    observer.on(.next(image as UIImage))
-                    observer.on(.completed)
-                } else {
-                    observer.on(.error(RxError.unknown))
+        return all()
+            .filter({ $0.count > 0})
+            .flatMap { assets in
+                Observable.create() { observer in
+                    PHImageManager.default().requestImage(for: assets[index], targetSize: size, contentMode: contentMode, options: nil) { (result, info) in
+                        if let image = result {
+                            observer.on(.next(image as UIImage))
+                            observer.on(.completed)
+                        } else {
+                            observer.on(.error(RxError.unknown))
+                        }
+                    }
+                    return Disposables.create()
                 }
+        }
+    }
+}
+
+
+// Private Helpers
+
+extension PNTMPhotos {
+    func collection() -> Observable<PHAssetCollection> {
+        return Observable.create() { observer in
+            var placeholder: PHObjectPlaceholder!
+            let fetchOptions = PHFetchOptions()
+            fetchOptions.predicate = NSPredicate(format: "title = %@", self.collectionName)
+            var collectionOptional = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: fetchOptions)
+            if let collection = collectionOptional.firstObject {
+                observer.on(.next(collection))
+                observer.on(.completed)
+            } else {
+                PHPhotoLibrary.shared().performChanges({
+                    let createCollectionRequest = PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: self.collectionName)
+                    placeholder = createCollectionRequest.placeholderForCreatedAssetCollection
+                }, completionHandler: { (success, error) in
+                    if success {
+                        collectionOptional = PHAssetCollection.fetchAssetCollections(withLocalIdentifiers: [placeholder.localIdentifier], options: nil)
+                        if let collection = collectionOptional.firstObject {
+                            observer.on(.next(collection))
+                            observer.on(.completed)
+                        } else {
+                            observer.on(.error(RxError.unknown))
+                        }
+                    }
+                    else {
+                        observer.on(.error(RxError.unknown))
+                    }
+                })
             }
             return Disposables.create()
         }

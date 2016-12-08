@@ -17,11 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let photos = PNTMPhotos(withAlbum: "Berlin Photobox")
-        _ = photos.all()
-        _ = photos.select(index: 1, width: 200).subscribe(onNext: { image in
+        let photos = PNTMPhotos(withAlbum: "All Photos")
+        _ = photos.select(index: 1, size: CGSize(width: 100, height: 100), contentMode: .aspectFit).subscribe(onNext: { image in
             print(image)
         })
+        
+        _ = photos.all()
         
         return true
     }
