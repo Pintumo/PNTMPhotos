@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		176022201DFF02FF008EAB85 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1760221E1DFF0177008EAB85 /* Default-568h@2x.png */; };
 		17A14AF01DF813360069FFA5 /* PNTMPhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A14AEF1DF813360069FFA5 /* PNTMPhotosTests.swift */; };
 		17A14AFC1DF814240069FFA5 /* PNTMPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A14AFB1DF814240069FFA5 /* PNTMPhotos.swift */; };
-		17A7FEF61DFEF84900ED4BDE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17ADDD281DFEF32E00E041A8 /* Info.plist */; };
 		17A7FEFB1DFEF8B700ED4BDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17ADDD1E1DFEF28800E041A8 /* LaunchScreen.storyboard */; };
 		17A7FEFC1DFEF8B700ED4BDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17ADDD201DFEF28800E041A8 /* Main.storyboard */; };
 		17ADDD251DFEF2C400E041A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17ADDD241DFEF2C400E041A8 /* AppDelegate.swift */; };
@@ -30,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1760221E1DFF0177008EAB85 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Example/Default-568h@2x.png"; sourceTree = "<group>"; };
 		17A14AD71DF813350069FFA5 /* PNTMPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PNTMPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A14AEB1DF813360069FFA5 /* PNTMPhotosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PNTMPhotosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A14AEF1DF813360069FFA5 /* PNTMPhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNTMPhotosTests.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		17A14AD91DF813350069FFA5 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				1760221E1DFF0177008EAB85 /* Default-568h@2x.png */,
 				17ADDD241DFEF2C400E041A8 /* AppDelegate.swift */,
 				17ADDD261DFEF30500E041A8 /* Assets.xcassets */,
 				17ADDD281DFEF32E00E041A8 /* Info.plist */,
@@ -197,8 +199,7 @@
 				TargetAttributes = {
 					17A14AD61DF813350069FFA5 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 642J3P53HE;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					17A14AEA1DF813360069FFA5 = {
 						CreatedOnToolsVersion = 8.1;
@@ -233,8 +234,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A7FEFB1DFEF8B700ED4BDE /* LaunchScreen.storyboard in Resources */,
+				176022201DFF02FF008EAB85 /* Default-568h@2x.png in Resources */,
 				17A7FEFC1DFEF8B700ED4BDE /* Main.storyboard in Resources */,
-				17A7FEF61DFEF84900ED4BDE /* Info.plist in Resources */,
 				17ADDD271DFEF30500E041A8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +490,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pintumo.PNTMPhotos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -502,6 +505,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pintumo.PNTMPhotos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
