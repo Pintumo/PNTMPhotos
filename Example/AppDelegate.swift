@@ -6,6 +6,7 @@
 //  Copyright © 2016 Pintumo. All rights reserved.
 //
 
+import RxSwift
 import UIKit
 
 @UIApplicationMain
@@ -15,7 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let photos = PNTMPhotos(withAlbum: "PNTMPhotos")
+        
+        _ = photos.save(image: UIImage(named: "PNTMPhotosLogo")!).subscribe(onNext: { saved in
+            print(saved)
+        })
+        
+        _ = photos.select(index: 0, size: CGSize(width: 100, height: 100), contentMode: .aspectFit).subscribe(onNext: { image in
+            print(image)
+        })
+        
+        _ = photos.all().subscribe(onNext: { assets in
+            print(assets.count)
+        })
+        
         return true
     }
 
