@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "PNTMPhotos"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "PNTMPhotos is a light weight interface to PHPhotoLibrary."
 
   s.description  = <<-DESC
